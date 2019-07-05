@@ -3,7 +3,6 @@ import argparse
 from keras.models import load_model
 from keras.preprocessing import image
 import numpy as np
-
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 from pylab import text
@@ -11,7 +10,7 @@ from pylab import text
 
 def parse_arguments():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--model', dest='model', type=str,
+    parser.add_argument('--model', dest='model', type=str, default='model.h5',
                         help='Path to the model')
     parser.add_argument('--image', dest='image', type=str,
                         help='Path to the image')
